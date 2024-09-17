@@ -27,3 +27,6 @@ jobs:
       - name: "VARIABLES POR DEFECTO"
         run: |
           echo "Evento: ${{ toJSON(github) }}"
+          echo "github.actor: ${{ toJSON(github.actor) }}"
+          echo "GITHUB_ACTOR: $GITHUB_ACTOR"
+          echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"  
