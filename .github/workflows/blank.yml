@@ -11,6 +11,8 @@ jobs:
       platform: aws
       region: us-west-1
       account: 1111111
+      MICLAVE: ${{secrets.MICLAVE}}
+      MINOMBRE: ${{secrets.MINOMBRE}}
     runs-on: ubuntu-latest
 
     steps:
@@ -26,7 +28,9 @@ jobs:
 
       - name: "VARIABLES POR DEFECTO"
         run: |
-          echo "Evento: ${{ toJSON(github) }}"
-          echo "github.actor: ${{ toJSON(github.actor) }}"
+          #echo "Evento: ${{ toJSON(github) }}"
+          #echo "github.actor: ${{ toJSON(github.actor) }}"
           echo "GITHUB_ACTOR: $GITHUB_ACTOR"
-          echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"  
+          echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY" 
+          echo "MICLAVE: ${{ env.MICLAVE }}" 
+          echo "MINOMBRE: ${{ env.MINOMBRE }}" 
