@@ -23,3 +23,7 @@ jobs:
           echo "Esto es el valor de platform: ${{ env.platform }}"
           echo "Esto es el valor de region: ${{ env.region }}"
           echo "Esto es el valor de account: ${{ env.account }}"
+
+      - name: "VARIABLES POR DEFECTO"
+        run: |
+          echo "Evento: ${{ toJSON(github) }}"
